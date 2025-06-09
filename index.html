@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Task Manager - Retro Style</title>
+<link rel="stylesheet" href="css/style.css" />
+<link rel="icon" href="images/icon-192x192.png" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+<link rel="manifest" href="/manifest.json">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div id="clock">
+        <span id="hour">00</span><span id="colon">:</span><span id="minute">00</span><span id="colon">:</span><span id="second">00</span>
+      </div>
+    </header>
+
+    <section class="task-manager">
+      <h2>Task Manager</h2>
+      <form id="task-form" autocomplete="off">
+        <input type="text" id="task-title" placeholder="Task title" required maxlength="50" />
+        <input type="date" id="task-deadline" required />
+        <select id="task-category" required>
+          <option value="" disabled selected>Category</option>
+          <option value="Job Hunting">Job Hunting</option>
+          <option value="Study">Study</option>
+          <option value="Private">Private</option>
+        </select>
+        <button type="submit">Add Task</button>
+      </form>
+
+      <div class="category-tabs" id="category-tabs">
+        <div class="category-tab active" data-category="all">All</div>
+        <div class="category-tab" data-category="Job Hunting">Job Hunting</div>
+        <div class="category-tab" data-category="Study">Study</div>
+        <div class="category-tab" data-category="Private">Private</div>
+      </div>
+
+      <div class="task-list" id="task-list"></div>
+
+      <section class="memo-section">
+        <h3>Memo</h3>
+        <textarea id="memo" placeholder="Write your notes here..."></textarea>
+      </section>
+    </section>
+
+    <footer>
+      © 2025 Your Name | Retro Style Task Manager
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
